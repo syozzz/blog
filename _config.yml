@@ -82,7 +82,7 @@ deploy:
   repo: 
     # github: git@github.com:honjun/honjun.github.io.git
     # github: https://github.com/honjun/honjun.github.io.git
-    coding: git@gitee.com:syozzz/blog.git
+    coding: 
   branch: master
 
 # backup
@@ -91,7 +91,7 @@ backup:
   message: backup my blog of https://yourname.github.io/
   repository:
     # github: https://github.com/honjun/honjun.github.io.git,backup
-    coding: git@gitee.com:syozzz/blog.git,backup
+    coding: 
 
 #RSS
 feed:
