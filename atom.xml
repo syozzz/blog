@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>poco</title>
+  
+  
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="https://syozzz.github.io/blog/"/>
+  <updated>2020-07-24T11:34:36.477Z</updated>
+  <id>https://syozzz.github.io/blog/</id>
+  
+  <author>
+    <name>syo</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>服务器端主动推送数据-SSE</title>
+    <link href="https://syozzz.github.io/blog/2020/07/24/SseEmitter/"/>
+    <id>https://syozzz.github.io/blog/2020/07/24/SseEmitter/</id>
+    <published>2020-07-24T17:10:00.000Z</published>
+    <updated>2020-07-24T11:34:36.477Z</updated>
+    
+    <summary type="html">
+    
+      服务器推送技术 SSE（Server-sent Events）基于 spring-boot 的实现
+    
+    </summary>
+    
+      <category term="技术" scheme="https://syozzz.github.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="java" scheme="https://syozzz.github.io/blog/tags/java/"/>
+    
+      <category term="spring" scheme="https://syozzz.github.io/blog/tags/spring/"/>
+    
+      <category term="SseEmitter" scheme="https://syozzz.github.io/blog/tags/SseEmitter/"/>
+    
+  </entry>
+  
+</feed>
