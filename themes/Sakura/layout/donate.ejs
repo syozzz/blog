@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/donate.css">
+<link rel="stylesheet" href="<%- config.root %>css/donate.css">
 <div class="pattern-center-blank">
 </div>
 <div class="pattern-center ">
@@ -60,7 +60,7 @@
     jQuery(document).ready(function() {
     var QRBox = $('#QRBox');
     var MainBox = $('#MainBox');
-    var BTCQR = '/images/donate/BTCQR.png'; // 二维码路径
+    var BTCQR = '/blog/images/donate/BTCQR.png'; // 二维码路径
     var AliPayQR  = '<%- (theme.cdn || '') + theme.donate.alipay %>';
     var WeChanQR  = '<%- (theme.cdn || '') + theme.donate.wechatSQ %>';
 
