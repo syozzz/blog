@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/book.css">
+<div class="pattern-center-blank"></div>
+<div id="content" class="site-content-book">
+    <% var colorList = ['yellow', 'blue', 'grey']; %>
+    <% if (site.data.book) { %>
+        <ul class="align">
+            <%for (var i in site.data.book) {%>
+                <% var bangumi = site.data.book[i]; %>
+                <li>
+                    <figure class="book">
+                        <% if (bangumi.img) { %>
+                            <ul class='hardcover_front'>
+                                <li>
+                                    <img src="<%- bangumi.img %>" alt="<%- bangumi.title %>" width="100%" height="100%">
+                                    <% if (bangumi.ribbon) { %>
+                                        <span class="ribbon"><%- bangumi.ribbon %></span>
+                                    <% } %>
+                                </li>
+                                <li></li>
+                            </ul>
+                        <% } else { %>
+                            <ul class='hardcover_front'>
+                                <li>
+                                    <div class="coverDesign <%- colorList[i % 3] %>">
+                                        <% if (bangumi.ribbon) { %>
+                                            <span class="ribbon"><%- bangumi.ribbon %></span>
+                                        <% } %>
+                                        <h1><%- bangumi.title %></h1>
+                                        <p><%- bangumi.subTitle || '' %></p>
+                                    </div>
+                                </li>
+                                <li></li>
+                            </ul>
+                        <% } %>
+                        <ul class='page'>
+                            <li></li>
+                            <li>
+                                <a class="btn" href="javascript:void(0);"><%- bangumi.status || '阅读中...' %></a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class='hardcover_back'>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class='book_spine'>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <figcaption>
+                            <h3><%- bangumi.cTitle || bangumi.title %></h3>
+                            <span>By <%- bangumi.author %></span>
+                            <p><%- bangumi.comment || '' %></p>
+                        </figcaption>
+                    </figure>
+                </li>
+            <%}%>
+        </ul>
+    <% } %>
+</div>

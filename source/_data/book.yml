@@ -1,0 +1,40 @@
+1:
+    img: https://pic.imgdb.cn/item/5f1aa5ea14195aa594ed00d2.jpg
+    cTitle: Java编程思想
+    author: Bruce Eckel
+    status: 已看完
+    comment: 本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到...
+2:
+    img: https://pic.imgdb.cn/item/5f1aa97b14195aa594f01243.jpg
+    cTitle: Java并发编程实战
+    author: Brian Goetz / Tim Peierls / Joshua Bloch / Joseph Bowbeer / David Holmes / Doug Lea
+    status: 进行中
+    ribbon: New
+    comment: 本书深入浅出地介绍了Java线程和并发，是一本完美的Java并发参考手册。书中从并发性和线程安全性的基本概念出发，介绍了如何使用类库提供的基本并发构建块...
+3:
+    img: https://pic.imgdb.cn/item/5f1aaaa914195aa594f11b10.jpg
+    cTitle: Head First 设计模式
+    author: 弗里曼
+    status: 进行中
+    ribbon: New
+    comment: Head First设计模式》(中文版)共有14章，每章都介绍了几个设计模式，完整地涵盖了四人组版本全部23个设计模式...
+4:
+    img: https://pic.imgdb.cn/item/5f1aab5114195aa594f1d90d.jpg
+    cTitle: Python编程快速上手-让繁琐工作自动化
+    author: Albert Sweigart
+    status: 已看完
+    comment: 本书是一本面向实践的Python编程实用指南。本书的目的，不仅是介绍Python语言的基础知识，而且还通过项目实践教会读者如何应用这些知识和技能...
+5:
+    img: https://pic.imgdb.cn/item/5f1aac2214195aa594f2ad25.jpg
+    cTitle: Java Web高级编程
+    author: 威廉斯
+    status: 进行中
+    ribbon: New
+    comment: Java成为世界上编程语言之一是有其优势的。熟悉JavaSE的程序员可以轻松地进入到Java EE开发中，构建出安全、可靠和具有扩展性的企业级应用程序...
+6:
+    img: https://pic.imgdb.cn/item/5f1aacbf14195aa594f31a13.jpg
+    cTitle: 深入分析Java Web技术内幕
+    author: 许令波
+    status: 进行中
+    ribbon: New
+    comment: 新增了淘宝在无线端的应用实践，包括：CDN 动态加速、多终端化改造、 多终端Session 统一 ，以及在大流量的情况下，如何跨越性能、网络和一个地区的电力瓶颈等内容，并提供了比较完整的解决方案...

@@ -1,0 +1,85 @@
+# site name
+prefixName: syo's
+siteName: blog
+# favicon and site master avatar
+favicon: /images/favicon.ico
+avatar: https://pic.downk.cc/item/5efaf31714195aa59486bf81.jpg
+url: https://sakura.hojun.cn
+description:
+cdn:
+pjax:
+# 1开启
+mathjax: 0
+
+notice:
+lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
+
+menus:
+  首页: { path: /, fa: fa-fort-awesome faa-shake }
+  归档: { path: /archives, fa: fa-archive faa-shake, submenus: { 
+    技术: {path: /categories/技术/, fa: fa-code }
+  } }
+  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
+    书单: {path: /book/, fa: fa-th-list faa-bounce },
+    番组: {path: /bangumi/, fa: fa-film faa-vertical },
+    图集: {path: /gallery/, fa: fa-photo }
+  } }
+  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  友人帐: { path: /links/, fa: fa-link faa-shake }
+  #赞赏: { path: /donate/, fa: fa-heart faa-pulse }
+  关于: { path: javascript:;, fa: fa-leaf faa-wrench , submenus: {
+    我？: {path: /about/, fa: fa-meetup}, 
+    主题: {path: /theme-sakura/, fa: iconfont icon-sakura }
+  } }
+  RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+
+
+# Home page sort type: -1: newer first，1: older first.
+homePageSortType: -1
+# Home page article shown number)
+homeArticleShown: 10
+# 背景图片 更好的修改
+bg:
+  - https://pic.imgdb.cn/item/5efcad8814195aa594328b80.jpg
+
+# 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+bgclass:
+
+# startdash url, title, desc img
+startdash:
+
+
+# your site build time or founded date
+siteBuildingTime: 06/30/2020
+
+#social  url, img PC端配置
+social:
+  #bilibili https://pic.downk.cc/item/5efaf39e14195aa59486e764.png
+  weibo: {url: https://www.weibo.com/u/2721338135, img: https://pic.downk.cc/item/5efaf3e714195aa59486fe90.png}
+  wangyiyun: {url: https://music.163.com/#/user/home?id=105512465, img: https://pic.downk.cc/item/5efaf40714195aa5948707cc.png}
+  email: {url: mailto:15228134593@163.com, img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/email.svg}
+  wechat: {url: /#, qrcode: https://pic.imgdb.cn/item/5efb184114195aa594932cb6.jpg, img: https://pic.imgdb.cn/item/5efb17c814195aa594930211.png}
+
+#social  url, img 移动端配置
+msocial:
+  weibo: {url: https://www.weibo.com/u/2721338135, fa: fa-weibo, color: dd4b39}
+  qq: {url: https://wpa.qq.com/msgrd?v=3&uin=479067860&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
+
+donate:
+  paypal: https://www.paypal.me/hojuncn
+  alipay: /img/custom/donate/AliPayQR.jpg
+  wechat: /img/custom/donate/WeChanQR.jpg
+  wechatSQ: /img/custom/donate/WeChanSQ.jpg
+
+# 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
+movies:
+  url: https://cdn.jsdelivr.net/gh/honjun/hojun@1.2
+  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+  name: Unbroken.mp4
+
+
+# Valine
+valine: true
+v_appId: mlc9yl6iNeBmrHbMpfnDJzii-gzGzoHsz
+v_appKey: 8pt23DVVPowhoO1ruMlkKyGS
+
