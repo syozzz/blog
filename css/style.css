@@ -3947,6 +3947,7 @@ li.feature-2 {
     }
     .header-info {
         width: 90% !important;
+        display: none;
     }
     .header-info:before {
         top: 98px !important;
