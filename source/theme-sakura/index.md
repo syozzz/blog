@@ -6,6 +6,9 @@ keywords: Hexo 主题 Sakura 🌸
 description:
 photos: https://pic.imgdb.cn/item/5f0d776314195aa594d6d8e4.png
 ---
+{% raw %}
+<link rel="stylesheet" href="/blog/css/icon_fixed.css" media="all">
+{% endraw %}
 本 blog 主题魔改于 Hexo 主题 Sakura, 修改内容包括： 
 + 去除首页视频播放功能
 + 去除 header-top 头像及签名
