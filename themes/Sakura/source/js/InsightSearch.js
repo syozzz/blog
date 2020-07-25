@@ -39,7 +39,7 @@
             case 'CATEGORIES':
             case 'TAGS':
                 $searchItems = array.map(function (item) {
-                    return searchItem(type === 'CATEGORIES' ? 'folder' : 'tag', item.name, item.slug, null, item.permalink.replace(location.origin, ''));
+                    return searchItem(type === 'CATEGORIES' ? 'folder' : 'tag', item.name, item.slug, null, item.permalink.replace(CONFIG.DOMAIN, ''));
                 });
                 break;
             default:
