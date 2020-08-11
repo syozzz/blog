@@ -27,7 +27,7 @@ photos: https://pic.imgdb.cn/item/5f1c36a214195aa594c1b1bd.jpg
 
 优势：利于 SEO ，首屏加载快。
 
-劣势：服务器压力大，好废资源。
+劣势：服务器压力大，耗费资源。
 
 ### Next.js 
 
@@ -57,7 +57,7 @@ yarn add next react react-dom
 
 也可以直接使用官方提供的 *create-next-app* 工具进行安装，这里不再赘述。
 
-####2.目录结构
+#### 2.目录结构
 
 *Next* 默认以根目录下 pages 目录作为页面级组件的映射目录，pages 下的组件都会以文件名注册为对应的路由，并不需要再使用 *react-dom* 显示的声明路由。
 
@@ -235,5 +235,5 @@ export default appWithTranslation(MyApp)
 
 ### 参考
 
-- [维基百科]([https://zh.wikipedia.org/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93](https://zh.wikipedia.org/wiki/服务器端渲染))
-- [Next.js 文档]([https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85](https://nextjs.frontendx.cn/docs/#安装))
+- [维基百科](https://zh.wikipedia.org/wiki/服务器端渲染)
+- [Next.js 文档](https://nextjs.frontendx.cn/docs/#安装)
