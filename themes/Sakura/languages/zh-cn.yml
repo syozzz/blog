@@ -57,3 +57,13 @@ spring:
     img: https://pic.imgdb.cn/item/5f1e491714195aa5948d685f.jpg
 SseEmitter:
     img: https://pic.imgdb.cn/item/5f1c36b314195aa594c1c68f.jpg
+javascript:
+    img: https://pic.imgdb.cn/item/5f322c6314195aa5948989b3.jpg
+react:
+    img: https://pic.imgdb.cn/item/5f322bf914195aa594896375.jpg
+next.js:
+    img: https://pic.imgdb.cn/item/5f322c8014195aa59489970a.jpg
+ssr:
+    img: https://pic.imgdb.cn/item/5f322d8214195aa59489fae9.png
+vercel:
+    img: https://pic.imgdb.cn/item/5f322e3914195aa5948a3e97.png
