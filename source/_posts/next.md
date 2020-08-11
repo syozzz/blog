@@ -114,7 +114,7 @@ export default class MyDocument extends Document {
 }
 ```
 
-**注意：**在 _document.js 中添加除 <Main> 以外的组件，并不会被渲染。
+**注意：**在 _document.js 中添加除 Main 以外的组件，并不会被渲染。
 
 #### 4.自定义 App
 
