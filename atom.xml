@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://syozzz.github.io/blog/"/>
-  <updated>2020-07-27T03:38:25.880Z</updated>
+  <updated>2020-08-11T07:03:21.740Z</updated>
   <id>https://syozzz.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Next.js 初见</title>
+    <link href="https://syozzz.github.io/blog/2020/08/11/next/"/>
+    <id>https://syozzz.github.io/blog/2020/08/11/next/</id>
+    <published>2020-08-11T13:40:00.000Z</published>
+    <updated>2020-08-11T07:03:21.740Z</updated>
+    
+    <summary type="html">
+    
+      使用 Next 做 react 应用的 SSR
+    
+    </summary>
+    
+      <category term="技术" scheme="https://syozzz.github.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://syozzz.github.io/blog/tags/javascript/"/>
+    
+      <category term="next.js" scheme="https://syozzz.github.io/blog/tags/next-js/"/>
+    
+      <category term="ssr" scheme="https://syozzz.github.io/blog/tags/ssr/"/>
+    
+      <category term="react" scheme="https://syozzz.github.io/blog/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
     <title>服务器端主动推送数据-SSE</title>
     <link href="https://syozzz.github.io/blog/2020/07/24/SseEmitter/"/>
     <id>https://syozzz.github.io/blog/2020/07/24/SseEmitter/</id>
     <published>2020-07-24T17:10:00.000Z</published>
-    <updated>2020-07-27T03:38:25.880Z</updated>
+    <updated>2020-08-11T07:03:21.740Z</updated>
     
     <summary type="html">
     

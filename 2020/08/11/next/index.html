@@ -6,7 +6,7 @@
   <meta name="referrer" content="never">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2020 | poco</title>
+  <title itemprop="name">Next.js 初见 | poco</title>
   
     <link rel="shortcut icon" href="/blog//images/favicon.ico">
   
@@ -298,92 +298,277 @@
   </div>
 </header>
 
-      <link rel="stylesheet" href="/blog/css/icon_fixed.css" media="all">
-<div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2020年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      08月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/blog/2020/08/11/next/">
-                          <span style="color:#0bf;">
-                          11日13:40:00</span>
-                          Next.js 初见
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      07月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/blog/2020/07/24/SseEmitter/">
-                          <span style="color:#0bf;">
-                          24日17:10:00</span>
-                          服务器端主动推送数据-SSE
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-            </div>
-          </div>
-        </div>
-      </article>
+      <link rel="stylesheet" type="text/css" href="/blog/css/sharejs.css">
+<link href="http://cdn.bootcdn.net/ajax/libs/tocbot/4.4.2/tocbot.css" rel="stylesheet">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://pic.imgdb.cn/item/5f1c36a214195aa594c1b1bd.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://pic.imgdb.cn/item/5f1c36a214195aa594c1b1bd.jpg">
     </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Next.js 初见</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://pic.imgdb.cn/item/5efaf31714195aa59486bf81.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">syo</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-8-11
+    </header>
   </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>一直以来写 <em>React</em> 应用都是基于 <em>create-react-app</em> 搭建的,   使用起来倒也顺畅，但是最终 build 出来的 bundle 包往往都非常的大，即使使用 <em>react-loadable</em> 按不同页面拆分动态引入，应用首屏渲染所要加载的依赖也是不可小觑的。这就导致首屏加载会有较长的留白时间，用户体验大打折扣。SSR（服务器端渲染 Server Side Render）便是一种解决此类问题的利器。在最近的项目里，便体验了一次使用 <em>Next.js</em> 做 <em>React</em> 应用的服务端渲染，这里做下记录，以防以后再踩坑。</p>
+<h3 id="服务端渲染定义"><a href="#服务端渲染定义" class="headerlink" title="服务端渲染定义"></a>服务端渲染定义</h3><blockquote>
+<p><strong>SSR服务端渲染</strong>（server side render）*指一般情况下，一个<a href="https://zh.wikipedia.org/w/index.php?title=Web页面&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">web页面</a>的数据渲染都是由<a href="https://zh.wikipedia.org/wiki/客户端" target="_blank" rel="noopener">客户端</a>或者<a href="https://zh.wikipedia.org/wiki/浏览器" target="_blank" rel="noopener">浏览器</a>端来完成。先从<a href="https://zh.wikipedia.org/wiki/服务器" target="_blank" rel="noopener">服务器</a>请求，然后到页面；再通过<a href="https://zh.wikipedia.org/wiki/AJAX" target="_blank" rel="noopener">AJAX</a>请求到页面数据并把相应的数据填充到<a href="https://zh.wikipedia.org/wiki/模板" target="_blank" rel="noopener">模板</a>，形成完整的页面来呈现给用户。服务端渲染把数据的初始请求放在了服务端，服务端收到请求后，把数据填充到模板形成完整的页面，由服务端把渲染的完整的页面返回给客户端。这样减少了一次客户端到服务端的<a href="https://zh.wikipedia.org/wiki/HTTP" target="_blank" rel="noopener">HTTP</a>请求，加快了相应速度，一般用于首屏的性能优化。</p>
+</blockquote>
+<h3 id="服务端渲染优劣"><a href="#服务端渲染优劣" class="headerlink" title="服务端渲染优劣"></a>服务端渲染优劣</h3><p>当然，服务端渲染也是一把双刃剑，有优点，也存在缺点。</p>
+<p>优势：利于 SEO ，首屏加载快。</p>
+<p>劣势：服务器压力大，好废资源。</p>
+<h3 id="Next-js"><a href="#Next-js" class="headerlink" title="Next.js"></a>Next.js</h3><blockquote>
+<p>Next.js是一个基于React.js的开放源码的网络套件架构。Next.js的使用者包含腾讯新闻、抖音、币安、Netflix、以及Y Combinator公司投资的Twitch和Scale。Next.js在npm上每周下载次数有47万次。</p>
+<p>Next.js能让网络应用程序开发者使用React.js的模式来创造服务器绘制的静态网页或动态网页。因此，网络爬虫可以更有效率的自动浏览网页于达成更好的SEO。相较之下，传统React.js的单页应用大多必须由客户端的JavaScript绘制网页的完整内容。</p>
+</blockquote>
+<h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h4><p>添加依赖</p>
+<pre><code class="shell">yarn add next react react-dom
+</code></pre>
+<p>在 package.json 中添加脚本</p>
+<pre><code class="json">    {
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;next&quot;,
+    &quot;build&quot;: &quot;next build&quot;,
+    &quot;start&quot;: &quot;next start&quot;
+  }
+}
+</code></pre>
+<p>也可以直接使用官方提供的 <em>create-next-app</em> 工具进行安装，这里不再赘述。</p>
+<p>####2.目录结构</p>
+<p><em>Next</em> 默认以根目录下 pages 目录作为页面级组件的映射目录，pages 下的组件都会以文件名注册为对应的路由，并不需要再使用 <em>react-dom</em> 显示的声明路由。</p>
+<p><em>Next</em> 默认以根目录下 public 目录作为静态资源的映射目录，代码可以通过 / 直接对静态资源进行访问。</p>
+<h4 id="3-自定义-Document"><a href="#3-自定义-Document" class="headerlink" title="3.自定义 Document"></a>3.自定义 Document</h4><p>通常我们只需要在对应的页面级组件中写代码就行了，<em>Next</em> 会自动为我们添加 html, body 等标签。但是，如果有一些需要个性化的地方，比如定义公共的 meta 标签，设置 icon 等，便需要对 Document 进行自定义。在 pages 目录下，创建 _document.js 文件即可自定义 Document。</p>
+<p>以引入 styled-components 为例。</p>
+<pre><code class="javascript">import Document, { Head, Main, NextScript } from &#39;next/document&#39;
+import { ServerStyleSheet } from &#39;styled-components&#39;
+
+//继承 Next 的 Document
+export default class MyDocument extends Document {
+
+    static async getInitialProps(ctx) {
+        const initialProps = await Document.getInitialProps(ctx)
+        //挂载 styled-components
+        const sheet = new ServerStyleSheet()
+        const originalRenderPage = ctx.renderPage
+        ctx.renderPage = () =&gt; originalRenderPage({
+            enhanceApp: App =&gt; (props) =&gt;
+                // App挂载样式
+                sheet.collectStyles(&lt;App {...props} /&gt;)
+        })
+        return {
+            ...initialProps,
+            styles: (
+                &lt;&gt;
+                    {initialProps.styles}
+                    {sheet.getStyleElement()}
+                &lt;/&gt;
+            )
+        }
+    }
+
+    render() {
+        return (
+            &lt;html&gt;
+                &lt;Head&gt;
+                    &lt;meta name=&quot;referrer&quot; content=&quot;never&quot; /&gt;
+                    ...icon meta 等配置
+                &lt;/Head&gt;
+                &lt;body&gt;
+                    &lt;Main /&gt;
+                    &lt;NextScript /&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+        )
+    }
+}
+</code></pre>
+<p><strong>注意：</strong>在 _document.js 中添加除 <main> 以外的组件，并不会被渲染。</main></p>
+<h4 id="4-自定义-App"><a href="#4-自定义-App" class="headerlink" title="4.自定义 App"></a>4.自定义 App</h4><p>当我们还需要对 App 渲染做些自定义逻辑时，可以通过在 pages 目录下添加 _app.js 来实现。</p>
+<p>以添加公共吸顶 Header 为例。</p>
+<pre><code class="javascript">import App from &#39;next/app&#39;
+import { appWithTranslation } from &#39;../i18n&#39;
+import { StickyContainer, Sticky } from &#39;react-sticky&#39;
+import Header from &#39;../components/header&#39;
+import Tabs from &#39;../components/tabs&#39;
+
+class MyApp extends App {
+
+    static async getInitialProps ({ Component, router, ctx }) {
+        let pageProps = {}
+
+        if (Component.getInitialProps) {
+            pageProps = await Component.getInitialProps(ctx)
+        }
+
+        return {pageProps}
+    }
+
+    render() {
+        const { Component, pageProps } = this.props
+        return (
+            &lt;StickyContainer&gt;
+                &lt;Header/&gt;
+                &lt;Sticky topOffset={60}&gt;
+                    {({
+                          style
+                      }) =&gt; (
+                        &lt;div
+                            style={{
+                                ...style,
+                                zIndex: 1000,
+                                background: '#ffffff'
+                            }}
+                        &gt;
+                            &lt;Tabs style={{...style}}/&gt;
+                        &lt;/div&gt;
+                    )}
+                &lt;/Sticky&gt;
+                &lt;Component {...pageProps} /&gt;
+            &lt;/StickyContainer&gt;
+        )
+    }
+}
+
+export default appWithTranslation(MyApp)
+</code></pre>
+<h4 id="5-整合-ant-design"><a href="#5-整合-ant-design" class="headerlink" title="5.整合 ant-design"></a>5.整合 ant-design</h4><ul>
+<li><p>添加依赖</p>
+<pre><code class="shell">yarn add @next/bundle-analyzer babel-plugin-import antd @ant-design/icons
+</code></pre>
+</li>
+<li><p>根目录下添加 next.config.js</p>
+<pre><code class="javascript">const withBundleAnalyzer = require(&#39;@next/bundle-analyzer&#39;)({
+    enabled: process.env.ANALYZE === &#39;true&#39;,
+})
+
+module.exports = withBundleAnalyzer()
+</code></pre>
+</li>
+<li><p>_app.js 中引入 antd 的样式</p>
+<pre><code class="javascript">...
+import &#39;antd/dist/antd.min.css&#39;
+...
+</code></pre>
+</li>
+<li><p>根目录下新增 .babelrc 文件</p>
+<pre><code class="javascript">{
+  &quot;presets&quot;: [
+    &quot;next/babel&quot;
+  ],
+  &quot;plugins&quot;: [
+    [
+      &quot;babel-plugin-styled-components&quot;,
+      {
+        &quot;ssr&quot;: true,
+        &quot;displayName&quot;: true,
+        &quot;preprocess&quot;: false
+      }
+    ],
+    [
+      &quot;import&quot;,
+      {
+        &quot;libraryName&quot;: &quot;antd&quot;,
+        &quot;libraryDirectory&quot;: &quot;lib&quot;,
+        &quot;style&quot;: &quot;index.css&quot;
+      }
+    ],
+    [
+      &quot;import&quot;,
+      {
+        &quot;libraryName&quot;: &quot;@ant-design/icons&quot;,
+        &quot;libraryDirectory&quot;: &quot;lib/icons&quot;,
+        &quot;camel2DashComponentName&quot;: false
+      },
+      &quot;@ant-design/icons&quot;
+    ]
+  ]
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="[https://zh.wikipedia.org/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93](https://zh.wikipedia.org/wiki/服务器端渲染">维基百科</a>)</li>
+<li><a href="[https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85](https://nextjs.frontendx.cn/docs/#安装">Next.js 文档</a>)</li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/blog/2020/07/24/SseEmitter/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://pic.imgdb.cn/item/5efb4ac414195aa594a4b87c.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://pic.imgdb.cn/item/5efb4ac414195aa594a4b87c.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                服务器端主动推送数据-SSE</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "mlc9yl6iNeBmrHbMpfnDJzii-gzGzoHsz",
+        appKey: "8pt23DVVPowhoO1ruMlkKyGS",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>
     <div class="ins-search">
