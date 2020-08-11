@@ -338,7 +338,7 @@
 </blockquote>
 <h3 id="服务端渲染优劣"><a href="#服务端渲染优劣" class="headerlink" title="服务端渲染优劣"></a>服务端渲染优劣</h3><p>当然，服务端渲染也是一把双刃剑，有优点，也存在缺点。</p>
 <p>优势：利于 SEO ，首屏加载快。</p>
-<p>劣势：服务器压力大，好废资源。</p>
+<p>劣势：服务器压力大，耗费资源。</p>
 <h3 id="Next-js"><a href="#Next-js" class="headerlink" title="Next.js"></a>Next.js</h3><blockquote>
 <p>Next.js是一个基于React.js的开放源码的网络套件架构。Next.js的使用者包含腾讯新闻、抖音、币安、Netflix、以及Y Combinator公司投资的Twitch和Scale。Next.js在npm上每周下载次数有47万次。</p>
 <p>Next.js能让网络应用程序开发者使用React.js的模式来创造服务器绘制的静态网页或动态网页。因此，网络爬虫可以更有效率的自动浏览网页于达成更好的SEO。相较之下，传统React.js的单页应用大多必须由客户端的JavaScript绘制网页的完整内容。</p>
@@ -356,8 +356,7 @@
 }
 </code></pre>
 <p>也可以直接使用官方提供的 <em>create-next-app</em> 工具进行安装，这里不再赘述。</p>
-<p>####2.目录结构</p>
-<p><em>Next</em> 默认以根目录下 pages 目录作为页面级组件的映射目录，pages 下的组件都会以文件名注册为对应的路由，并不需要再使用 <em>react-dom</em> 显示的声明路由。</p>
+<h4 id="2-目录结构"><a href="#2-目录结构" class="headerlink" title="2.目录结构"></a>2.目录结构</h4><p><em>Next</em> 默认以根目录下 pages 目录作为页面级组件的映射目录，pages 下的组件都会以文件名注册为对应的路由，并不需要再使用 <em>react-dom</em> 显示的声明路由。</p>
 <p><em>Next</em> 默认以根目录下 public 目录作为静态资源的映射目录，代码可以通过 / 直接对静态资源进行访问。</p>
 <h4 id="3-自定义-Document"><a href="#3-自定义-Document" class="headerlink" title="3.自定义 Document"></a>3.自定义 Document</h4><p>通常我们只需要在对应的页面级组件中写代码就行了，<em>Next</em> 会自动为我们添加 html, body 等标签。但是，如果有一些需要个性化的地方，比如定义公共的 meta 标签，设置 icon 等，便需要对 Document 进行自定义。在 pages 目录下，创建 _document.js 文件即可自定义 Document。</p>
 <p>以引入 styled-components 为例。</p>
@@ -509,8 +508,8 @@ import &#39;antd/dist/antd.min.css&#39;
 </li>
 </ul>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a href="[https://zh.wikipedia.org/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93](https://zh.wikipedia.org/wiki/服务器端渲染">维基百科</a>)</li>
-<li><a href="[https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85](https://nextjs.frontendx.cn/docs/#安装">Next.js 文档</a>)</li>
+<li><a href="https://zh.wikipedia.org/wiki/服务器端渲染" target="_blank" rel="noopener">维基百科</a></li>
+<li><a href="https://nextjs.frontendx.cn/docs/#安装" target="_blank" rel="noopener">Next.js 文档</a></li>
 </ul>
 
         </div>
